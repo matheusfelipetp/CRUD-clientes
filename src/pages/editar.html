@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/styleBase.css">
+    <script defer src="../js/modules/btnMobile.js"></script>
+    <script defer type="module" src="../js/editar.js"></script>
+    <title>Entrega Lista de Clientes</title>
+</head>
+
+<body>
+    <header>
+        <nav id="nav-mobile">
+            <ul class="nav__menu" role="menu">
+                <li><a href="../../index.html">Listar Clientes</a></li>
+                <li><a href="./cadastrar.html">Criar Clientes</a></li>
+                <li><a href="./editar.html">Editar Clientes</a></li>
+                <li><a href="./deletar.html">Deletar Clientes</a></li>
+            </ul>
+            <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="nav__menu" aria-expanded="false">
+                <span id="menu-hamburguer"></span>
+            </button>
+        </nav>
+    </header>
+
+    <form>
+        <label for="cliente">Escolha o cliente que quer editar</label>
+        <select name="cliente"></select>
+        <button id="btn-buscar">Buscar Cliente</button>
+
+    </form>
+
+    <form id="form-editar">
+        <h2>Editar cliente</h2>
+
+        <h3>Dados pessoais</h3>
+        <input id="nome-editar" type="text" name="nome" placeholder="digite seu nome" />
+        <input id="email-editar" type="text" name="email" placeholder="digite sua email" />
+        <input id="idade-editar" type="number" name="idade" placeholder="digite sua idade" />
+        <input id="cpf-editar" type="text" name="cpf" placeholder="digite seu cpf" />
+        <input id="sexo-editar" type="text" name="sexo" placeholder="digite seu sexo" />
+
+        <h3>Endereço</h3>
+        <input id="cep-editar" type="number" name="cep" placeholder="digite seu cep" />
+        <input id="rua-editar" type="text" name="rua" placeholder="digite sua rua" />
+        <input id="numero-editar" type="number" name="numero" placeholder="digite o numero" />
+        <input id="bairro-editar" type="text" name="bairro" placeholder="digite seu bairro" />
+        <input id="cidade-editar" type="text" name="cidade" placeholder="digite sua cidade" />
+        <input id="estado-editar" type="text" name="estado" placeholder="digite seu estado" />
+
+        <button id="btn-atualizar">Atualizar Dados</button>
+    </form>
+
+    <div class="toast">
+        <div class="toast__header">
+            <h2>Deu tudo certo!</h2>
+        </div>
+        <div class="toast__body">
+            <p>Usuário atualizado com sucesso!</p>
+        </div>
+    </div>
+</body>
+
+</html>
